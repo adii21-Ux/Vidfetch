@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-w=7qru)22d+py#4_)*2ys7um3r_zt-cjv_z7v=-j5)pp5%hq3e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
+CELERY_BROKER_URL = "redis://redis:6379/0"
 
 CELERY_BEAT_SCHEDULE = {
     'fetch-and-store-videos': {
