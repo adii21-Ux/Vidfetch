@@ -4,26 +4,26 @@ The goal of this project is to create an API that fetches the latest YouTube vid
 
 ## API Endpoints
 ### Get All Videos:
-URL: /videos/
-Method: GET
-Description: Returns all stored videos sorted by publishing datetime.
+- URL: /videos/
+- Method: GET
+- Description: Returns all stored videos sorted by publishing datetime.
 
 ### Get Paginated Videos:
-URL: /get-videos/
-Method: GET
-Description: Paginated response for stored videos, sorted by publishing datetime.
+- URL: /get-videos/
+- Method: GET
+- Description: Paginated response for stored videos, sorted by publishing datetime.
 
 ### Filter and Sort Videos:
-URL: /filter-videos/
-Method: GET
-Description: Allows filtering and sorting of videos based on specified parameters. Supports query parameters:
-field (default: published_at): Field to filter/sort on.
-order (default: desc): Sorting order (asc for ascending, desc for descending).
+- URL: /filter-videos/
+- Method: GET
+- Description: Allows filtering and sorting of videos based on specified parameters. Supports query parameters:
+-   field (default: published_at): Field to filter/sort on.
+-   order (default: desc): Sorting order (asc for ascending, desc for descending).
 
 ### Delete All Videos:
-URL: /delete-all-videos/
-Method: DELETE
-Description: Deletes all videos from the database.
+- URL: /delete-all-videos/
+- Method: DELETE
+- Description: Deletes all videos from the database.
 
 ## Project Setup
 1. Ensure you have Docker and Docker Compose installed on your system.
