@@ -1,6 +1,4 @@
 # YouTube Video Fetcher API
-## Project Goal
-The goal of this project is to create an API that fetches the latest YouTube videos for a given tag or search query, stores the relevant information in a database, and provides a paginated response sorted in reverse chronological order of their publishing date-time.
 
 ## API Endpoints
 ### Get All Videos:
