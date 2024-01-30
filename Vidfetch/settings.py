@@ -129,9 +129,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-YOUTUBE_DATA_API_KEY = 'AIzaSyDPgPokCDjafg6n1Sdm3dGtZJQ-iHoCXng'
-
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 
 CELERY_BEAT_SCHEDULE = {
@@ -139,4 +136,9 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'api.tasks.fetch_and_store_videos',
         'schedule': timedelta(seconds=20),  # Adjust the schedule as needed
     },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'api.views.CustomPagination',
+    'PAGE_SIZE': 10,
 }
