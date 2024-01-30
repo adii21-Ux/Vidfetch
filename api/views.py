@@ -9,6 +9,12 @@ class CustomPagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = 'page_size'
     max_page_size = 100
+    
+class AllVideoListView(APIView):
+    def get(self, request):
+        videos = Video.objects.all().order_by('-published_at')
+        serializer = VideoSerializer(videos, many=True)
+        return Response(serializer.data)
 
 class VideoListView(APIView):
     pagination_class = CustomPagination
@@ -24,15 +30,12 @@ class FilteredVideoListView(APIView):
     pagination_class = CustomPagination
 
     def get(self, request):
-        # Get parameters from the request
         field = request.query_params.get('field', 'published_at')
         order = request.query_params.get('order', 'desc')
 
-        # Validate order parameter
         if order not in ['asc', 'desc']:
             return Response({'error': 'Invalid order parameter. Use "asc" or "desc".'}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Get videos based on the parameters
         videos = Video.objects.all()
 
         if field == 'published_at':
