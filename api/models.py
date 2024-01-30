@@ -1,16 +1,13 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-
 class Video(models.Model):
-    video_id = models.CharField(max_length=50)
+    video_id = models.CharField(max_length=50, blank=True)
     title = models.CharField(max_length=255, blank=True)
-    description = models.TextField()
-    published_at = models.DateTimeField()
-    channel_id = models.CharField(max_length=50)
-    channel_title = models.CharField(max_length=100)
-    thumbnail_medium_url = models.URLField()
+    description = models.TextField(blank=True)
+    published_at = models.DateTimeField(blank=True, null=True)
+    channel_id = models.CharField(max_length=50, blank=True)
+    channel_title = models.CharField(max_length=100, blank=True)
+    thumbnail_medium_url = models.URLField(blank=True)
 
     class Meta:
         ordering = ['-published_at']
