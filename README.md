@@ -12,7 +12,7 @@
 - Description: Paginated response for stored videos, sorted by publishing datetime.
 
 ### Filter and Sort Videos:
-- URL: /filter-videos/
+- URL: /filter-videos/?field=<>&order=asc|desc
 - Method: GET
 - Description: Allows filtering and sorting of videos based on specified parameters. Supports query parameters:
 -   field (default: published_at): Field to filter/sort on.
