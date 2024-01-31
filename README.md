@@ -31,3 +31,13 @@
 4. Run docker using
 `docker-compose up --build`
 5. Access api at `http://0.0.0.0:8000/api/`
+
+## Output
+# Get Videos 
+![Sample Image](output/paginated-op.png)
+
+# Filtered Videos
+![Sample Image](output/filtered-op.png)
+
+# Docker Compose Running
+![Sample Image](output/docker-compose.png)
