@@ -34,7 +34,7 @@
 
 ## Output
 # Get Videos 
-![Sample Image](output/paginated-op.png)
+![output](https://github.com/adii21-Ux/Vidfetch/tree/master/Output/paginated-op.png)
 
 # Filtered Videos
 ![Sample Image](output/filtered-op.png)
