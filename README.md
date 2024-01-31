@@ -37,7 +37,7 @@
 ![output](https://github.com/adii21-Ux/Vidfetch/tree/master/Output/paginated-op.png)
 
 # Filtered Videos
-![Sample Image](output/filtered-op.png)
+[![Sample Image](output/filtered-op.png)](https://github.com/adii21-Ux/Vidfetch/blob/master/Output/filtered-op.png)
 
 # Docker Compose Running
 ![Sample Image](output/docker-compose.png)
